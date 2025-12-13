@@ -4,9 +4,9 @@ A React e-commerce application with Test-Driven Development (TDD) and CI/CD pipe
 
 ## 🔗 Links
 
-**Live Application:** [ADD YOUR VERCEL URL HERE]
+**Live Application:** [https://ci-cd-react-app.vercel.app/]
 
-**GitHub Repository:** [ADD YOUR GITHUB REPO URL HERE]
+**GitHub Repository:** [https://github.com/01dbryant/ci_cd_react_app.git]
 
 ## 📋 Project Requirements Met
 
