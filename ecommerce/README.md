@@ -1,16 +1,73 @@
-# React + Vite
+# E-Commerce Music Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React e-commerce application with Test-Driven Development (TDD) and CI/CD pipeline.
 
-Currently, two official plugins are available:
+## 🔗 Links
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Live Application:** [ADD YOUR VERCEL URL HERE]
 
-## React Compiler
+**GitHub Repository:** [ADD YOUR GITHUB REPO URL HERE]
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📋 Project Requirements Met
 
-## Expanding the ESLint configuration
+### Test-Driven Development (TDD)
+- ✅ **2 Unit Tests:** ProductCard and Cart components
+- ✅ **1 Integration Test:** Cart updates when adding products
+- ✅ Tests component rendering, state changes, and user interactions
+- ✅ All tests are focused, independent, and deterministic
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Continuous Integration (CI)
+- ✅ GitHub Actions workflow in `.github/workflows/main.yml`
+- ✅ Automatically triggers on push to `main` branch
+- ✅ Runs build and Jest tests
+- ✅ Workflow fails if any tests fail (prevents deployment of faulty code)
+
+### Continuous Deployment (CD)
+- ✅ Automated deployment to Vercel
+- ✅ Deploys only after CI tests pass successfully
+- ✅ Configured in GitHub Actions workflow
+
+## 🛠️ Tech Stack
+
+- React 19 + Vite
+- Jest + React Testing Library
+- GitHub Actions (CI/CD)
+- Vercel (Deployment)
+- ESLint
+
+## 🚀 Local Development
+
+```bash
+# Install dependencies
+npm install
+
+# Run tests
+npm test
+
+# Start dev server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+## 📁 Project Structure
+
+```
+ecommerce/
+├── src/
+│   ├── __tests__/          # Test files
+│   ├── components/         # React components
+│   ├── context/           # State management
+│   └── App.jsx
+└── .github/workflows/
+    └── main.yml           # CI/CD pipeline
+```
+
+## ✨ Features
+
+- Shopping cart with add/remove functionality
+- Real-time cart count updates
+- Product catalog display
+- Responsive design
+- Total price calculation

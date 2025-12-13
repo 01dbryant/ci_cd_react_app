@@ -1,4 +1,3 @@
-// src/components/ProductCard.jsx
 import { useCart } from '../context/CartContext';
 
 export default function ProductCard({ product }) {

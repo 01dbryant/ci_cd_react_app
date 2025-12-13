@@ -1,9 +1,8 @@
-// src/__tests__/Cart.test.jsx
 import { render, screen } from '@testing-library/react';
 import Cart from '../components/Cart';
 import { CartProvider } from '../context/CartContext';
 
-test('cart displays item count', () => {
+test('cart displays item count and empty state', () => {
   render(
     <CartProvider>
       <Cart />
@@ -11,5 +10,5 @@ test('cart displays item count', () => {
   );
 
   expect(screen.getByLabelText('cart-count')).toHaveTextContent('Items: 0');
-  expect(screen.getByRole('button', { name: /clear/i })).toBeInTheDocument();
+  expect(screen.getByText('Your cart is empty')).toBeInTheDocument();
 });

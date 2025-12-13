@@ -1,4 +1,3 @@
-// src/components/Cart.jsx
 import { useCart } from '../context/CartContext';
 
 export default function Cart() {
