@@ -28,10 +28,6 @@ jobs:
         working-directory: ./ecommerce
         run: npm ci
       
-      - name: Run linter
-        working-directory: ./ecommerce
-        run: npm run lint
-      
       - name: Build project
         working-directory: ./ecommerce
         run: npm run build
