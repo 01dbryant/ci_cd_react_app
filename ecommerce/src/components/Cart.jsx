@@ -1,7 +1,7 @@
 import { useCart } from '../context/CartContext';
 
 export default function Cart() {
-  const { items, clearCart } = useCart();
+  const { items, removeFromCart, clearCart } = useCart();
   
   const total = items.reduce((sum, item) => sum + item.price, 0);
   
@@ -20,6 +20,13 @@ export default function Cart() {
               <div key={`${item.id}-${index}`} className="cart-item">
                 <span className="cart-item-name">{item.image} {item.name}</span>
                 <span className="cart-item-price">${item.price.toFixed(2)}</span>
+                <button 
+                  className="remove-item-btn" 
+                  onClick={() => removeFromCart(index)}
+                  aria-label={`Remove ${item.name}`}
+                >
+                  ✕
+                </button>
               </div>
             ))}
           </div>
