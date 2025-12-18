@@ -59,14 +59,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       
-      - name: Copy Vercel config to root
-        run: |
-          cp ecommerce/.vercel/project.json .vercel/project.json
-      
       - name: Deploy to Vercel
         run: |
           npm install --global vercel@latest
-          vercel --prod --token=${{ secrets.VERCEL_TOKEN }} --yes --cwd ecommerce
+          cd ecommerce
+          vercel --prod --token=${{ secrets.VERCEL_TOKEN }} --yes --scope=deon-bryants-projects
         env:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
